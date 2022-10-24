@@ -26,6 +26,9 @@ class AppDelegate: NSObject, NSApplicationDelegate{
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        print("menu name changed");
+        NSApp.mainMenu?.item(at: 0)?.submenu?.title = "  "
+        
         setupAutoStartApp()
         registerDefaultValues()
         setupHotKey()

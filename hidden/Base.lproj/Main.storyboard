@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19142.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19142.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -785,11 +785,11 @@ between sections to configure Hidden Bar.</string>
                                             <box title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="mtL-vU-2iq">
                                                 <rect key="frame" x="41" y="-4" width="191" height="56"/>
                                                 <view key="contentView" id="N9Y-29-pHK">
-                                                    <rect key="frame" x="3" y="3" width="185" height="50"/>
+                                                    <rect key="frame" x="4" y="5" width="183" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yKf-P1-I45">
-                                                            <rect key="frame" x="1" y="1" width="147" height="46"/>
+                                                            <rect key="frame" x="1" y="1" width="145" height="44"/>
                                                             <buttonCell key="cell" type="push" title="Set Shortcut" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fc2-jD-QNf">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="system" size="15"/>
@@ -800,7 +800,7 @@ between sections to configure Hidden Bar.</string>
                                                             </connections>
                                                         </button>
                                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D4j-NZ-37N">
-                                                            <rect key="frame" x="136" y="8" width="48" height="32"/>
+                                                            <rect key="frame" x="134" y="7" width="48" height="32"/>
                                                             <buttonCell key="cell" type="push" title="⌫" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" inset="2" id="IId-1b-leb">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="system"/>

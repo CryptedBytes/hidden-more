@@ -72,6 +72,8 @@ class StatusBarController {
         
         if Preferences.areSeparatorsHidden {hideSeparators()}
         autoCollapseIfNeeded()
+        
+        
     }
     
     private func setupUI() {
