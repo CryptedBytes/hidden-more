@@ -24,6 +24,14 @@ class Util {
                                                          object: Bundle.main.bundleIdentifier!)
         }
     }
+    static func setMenuBarAppNameVisibility(setVisible:Bool){
+        if(setVisible){
+            NSApp.mainMenu?.item(at: 0)?.submenu?.title = "  "
+        }
+        else {
+            NSApp.mainMenu?.item(at: 0)?.submenu?.title = "Hidden Bar"
+        }
+    }
     
     static func showPrefWindow() {
         let prefWindow = PreferencesWindowController.shared.window

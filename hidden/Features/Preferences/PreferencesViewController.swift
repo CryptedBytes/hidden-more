@@ -9,6 +9,8 @@
 import Cocoa
 import Carbon
 import HotKey
+import AppKit
+
 
 class PreferencesViewController: NSViewController {
     
@@ -30,7 +32,7 @@ class PreferencesViewController: NSViewController {
     @IBOutlet weak var checkBoxLogin: NSButton!
     @IBOutlet weak var checkBoxShowPreferences: NSButton!
     @IBOutlet weak var checkBoxShowAlwaysHiddenSection: NSButton!
-    
+    @IBOutlet weak var checkBoxHideAppName: NSButton!
     @IBOutlet weak var checkBoxUseFullStatusbar: NSButton!
     @IBOutlet weak var timePopup: NSPopUpButton!
     
@@ -83,6 +85,11 @@ class PreferencesViewController: NSViewController {
         Preferences.useFullStatusBarOnExpandEnabled = sender.state == .on
     }
     
+    @IBAction func hideAppNameChanged(_ sender: NSButton) {
+        Preferences.isAppNameHidden = sender.state == .on
+        
+       
+    }
     
     @IBAction func timePopupDidSelected(_ sender: NSPopUpButton) {
         let selectedIndex = sender.indexOfSelectedItem
@@ -152,6 +159,7 @@ class PreferencesViewController: NSViewController {
     
     @objc private func updateData(){
         checkBoxUseFullStatusbar.state = Preferences.useFullStatusBarOnExpandEnabled ? .on : .off
+        checkBoxHideAppName.state = Preferences.isAppNameHidden ? .on : .off
         checkBoxLogin.state = Preferences.isAutoStart ? .on : .off
         checkBoxAutoHide.state = Preferences.isAutoHide ? .on : .off
         checkBoxShowPreferences.state = Preferences.isShowPreference ? .on : .off

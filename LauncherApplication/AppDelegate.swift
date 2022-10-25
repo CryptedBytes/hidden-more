@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             components.append("MacOS")
             let appName = "Hidden Bar"
             components.append(appName) //main app name
-            let newPath = NSString.path(withComponents: components)
+            let newPath = NSString.path(withComponents: components) 
             NSWorkspace.shared.launchApplication(newPath)
         }
         else {

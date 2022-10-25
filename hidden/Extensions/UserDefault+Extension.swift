@@ -13,6 +13,7 @@ extension UserDefaults {
         static let globalKey = "globalKey"
         static let numberOfSecondForAutoHide = "numberOfSecondForAutoHide"
         static let isAutoStart = "isAutoStart"
+        static let isAppNameHidden = "isAppNameHidden"
         static let isAutoHide = "isAutoHide"
         static let isShowPreference = "isShowPreferences"
         static let areSeparatorsHidden = "areSeparatorsHidden"

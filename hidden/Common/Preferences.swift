@@ -24,6 +24,22 @@ enum Preferences {
         }
     }
     
+    
+    static var isAppNameHidden: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: UserDefaults.Key.isAppNameHidden)
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaults.Key.isAppNameHidden)
+            
+            Util.setMenuBarAppNameVisibility(setVisible: newValue)
+            
+            NotificationCenter.default.post(Notification(name: .prefsChanged))
+        }
+    }
+    
+    
     static var isAutoStart: Bool {
         get {
             return UserDefaults.standard.bool(forKey: UserDefaults.Key.isAutoStart)

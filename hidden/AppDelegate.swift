@@ -26,8 +26,10 @@ class AppDelegate: NSObject, NSApplicationDelegate{
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        print("menu name changed");
-        NSApp.mainMenu?.item(at: 0)?.submenu?.title = "  "
+        if(Preferences.isAppNameHidden){
+            NSApp.mainMenu?.item(at: 0)?.submenu?.title = "  "
+        }
+        
         
         setupAutoStartApp()
         registerDefaultValues()
@@ -51,6 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate{
             UserDefaults.Key.isAutoStart: false,
             UserDefaults.Key.isShowPreference: true,
             UserDefaults.Key.isAutoHide: true,
+            UserDefaults.Key.isAppNameHidden: true,
             UserDefaults.Key.numberOfSecondForAutoHide: 10.0,
             UserDefaults.Key.areSeparatorsHidden: false,
             UserDefaults.Key.alwaysHiddenSectionEnabled: false
